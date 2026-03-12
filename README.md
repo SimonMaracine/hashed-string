@@ -13,10 +13,10 @@ Simply copy the header file and integrate it into your build system however you 
 using namespace hash::literals;
 
 int main() {
-    static constexpr auto h1 {hash::HashedStr32()};
-    static constexpr auto h2 {hash::HashedStr32("some_string")};
-    static constexpr auto h3 {"some_other_string"_h};
-    const auto h4 {hash::HashedStr32(std::string("dynamic_string"))};
+    static constexpr auto h1 = hash::HashedStr32();
+    static constexpr auto h2 = hash::HashedStr32("some_string");
+    static constexpr auto h3 = "some_other_string"_h;
+    const auto h4 = hash::HashedStr32(std::string("dynamic_string"));
 
     std::println("{}", h1);
     std::println("{}", h2);
